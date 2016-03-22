@@ -11,9 +11,10 @@
     (fn get-locations [s] (locs (tokenize s)))))
 
 (comment
-  (let [f (make-location-finder)]
+  (let [f (make-location-finder {})]
     (mapv f ["I live in the United Kingdom. In a city called London."
              "Let's meet up in Cali, if you want to."
              "Alabama, NY"]))
 
+  ;; => [("United Kingdom" "London") ("Cali") ("Alabama")]
   )
